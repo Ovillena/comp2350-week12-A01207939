@@ -2,8 +2,9 @@ const database = require("mongoose");
 const is_heroku = process.env.IS_HEROKU || false;
 const databaseName = "lab_example";
 const herokuURI =
-  "mongodb+srv://theMongoAdmin:accidentalLoginSteps@cluster0.n1i6g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-databaseName + "?retryWrites=true&w=majority";
+  "mongodb+srv://theMongoAdmin:accidentalLoginSteps@cluster0.n1i6g.mongodb.net/" +
+  databaseName +
+  "?retryWrites=true&w=majority";
 const localURI =
   "mongodb://localhost/" + databaseName + "?authSource=admin&retryWrites=true;";
 if (is_heroku) {
